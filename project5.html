@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 – Autonomous Systems Research</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="index.html" class="nav__logo">Miguel</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!--===== PROJECT HERO =====-->
+    <section class="home bd-grid" id="project">
+      <div class="home__data">
+        <h1 class="home__title">NASA Turbofan Jet Engine Data Set: Remaining Cycles Prediction Using Machine Learning Algorithms
+<br><span class="home__title-color">Capstone Project</span></h1>
+        <p>
+This capstone project, completed as part of the Diploma in Data Science and Digital Transformation at UAQ, focuses on predictive maintenance using the 
+
+  <a href="https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data" target="_blank" rel="noopener noreferrer">
+    NASA Turbofan Jet Engine dataset  </a> 
+
+. The project analyzes run-to-failure sensor data from turbofan engines to model their degradation and estimate Remaining Useful Life (RUL). Using machine learning and deep learning techniques, we developed predictive models and a user-friendly application that assists maintenance teams in scheduling interventions efficiently, reducing unnecessary costs and preventing failures that lead to downtime.
+
+        </p>
+      </div>
+  <!-- Image section -->
+  <div style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    margin-top: 2rem;
+  ">
+    <img src="assets/img/nasa.png" alt="Simulation setup" 
+         style="width: 40%; min-width: 280px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+    <img src="assets/img/uaq.png" alt="Routing visualization" 
+         style="width: 10%; min-width: 280px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+  </div>
+    </section>
+
+<!--===== OVERVIEW =====-->
+<section class="about section" id="overview">
+  <h2 class="section-title">Overview</h2>
+
+  <div>
+    <p class="about__text">
+<p>
+  This project uses the 
+  <a href="https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data" target="_blank" rel="noopener noreferrer">
+    NASA Turbofan Jet Engine dataset
+  </a> 
+  and focuses on the design and implementation of a nonlinear navigation observer for a quadrotor UAV using low-cost sensors and open-source software. 
+  Unmanned Aerial Vehicles (UAVs) are autonomous systems widely applied in environmental monitoring, precision agriculture, and defense. 
+  However, achieving stable and accurate control with inexpensive hardware introduces significant challenges due to measurement noise, biases, and uncertainty.
+</p>
+
+<p>
+  The proposed system integrates a cascaded observer architecture consisting of a rotational state observer (for angular velocity and attitude) 
+  and a translational state observer (for position and linear velocity). 
+  Based on Lyapunov stability analysis, the rotational observer demonstrates almost global asymptotic stability, 
+  while the translational observer achieves global exponential stability under mild assumptions on attitude estimation errors.
+</p>
+
+    <!--===== INTRODUCTION =====-->
+
+
+<section class="results section" id="results">
+  <h2 class="section-title">Introduction</h2>
+  <div class="about__container bd-grid" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+    <!-- Texto -->
+    <div style="width: 100%; max-width: 900px; margin: 0 auto;">
+      <p class="about__text">
+Predictive maintenance has become a key application of data science in engineering, aiming to anticipate equipment failures by analyzing operational and historical data. This approach helps reduce downtime, lower maintenance costs, and improve system reliability. Turbofan engines, widely used in the aerospace industry, provide an ideal case study due to their complexity and the availability of high-quality simulated degradation data.
+
+For this project, we selected the widely used NASA Turbofan Jet Engine Data Set (JEDS), a benchmark in the predictive maintenance community. The dataset contains run-to-failure simulations of turbofan engines under varying operating conditions and fault modes, making it well-suited for exploratory analysis and the development of Remaining Useful Life (RUL) prediction models. Its size, structure, and the extensive community discussion around it make it a valuable resource for testing machine learning and deep learning techniques in asset health management.
+      <p class="about__text">
+    </div>
+    
+ <!--===== OVERVIEW =====-->
+<section class="about section" id="overview">
+  <h2 class="section-title">Exploratory Analysis</h2>
+
+  <div>
+    <p class="about__text">The exploratory analysis is divided into two parts:
+(1) an individual analysis for each dataset, which differ by measurement conditions and degradation types, and
+(2) a general analysis combining all four experiments.
+
+All computations were performed in Jupyter notebooks and uploaded to GitHub; only the final visual results are shown here.
+
+Individual Dataset Analysis
+
+Histograms were generated to show the distribution of maximum engine cycles in each experiment, and the corresponding figure presents the average, minimum, and maximum values. Boxplots were also created to detect anomalies in cycle counts.
+
+Correlation heatmaps were produced for each dataset to examine relationships between variables. Based on these results, scatter plots were made for the most relevant and strongly correlated sensor and operating-condition variables. These plots are shown in the corresponding figures.
+
+General Analysis (All Data Combined)
+
+When merging all experiments, descriptive statistics for every variable were computed and are shown in the respective figure. A global histogram of maximum cycles across all engines is also included.
+
+A full correlation heatmap was generated, followed by more detailed scatter plots for sensors with the strongest correlations. Some apparent correlations lacked causal meaning and were discarded; the final plots are shown in the figures.
+  </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/boxplots-individual.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 50%; height: auto;">
+      <img src="assets/img/histo-sens.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 50%; height: auto;">
+    </div>
+
+    
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/correlacion-todos.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 50%; height: auto;">
+      
+    </div>
+    
+    <p class="about__text" style="margin-bottom: 1rem;">
+    </p>
+    <section class="algorithms section" id="algorithms">
+  
+
+      <!--===== Data preparation =====-->
+<section class="about section" id="overview">
+  <h2 class="section-title">Data preparation</h2>
+
+  <div>
+    <p class="about__text">
+
+This stage focuses on preparing the data for analysis and modeling. First, the necessary libraries are loaded and key parameters are defined.
+
+Data Loading:
+Test and training datasets are created by reading the corresponding .txt files for the four experimental scenarios. Each dataset is assigned a fault-model indicator, and all scenarios are then concatenated into unified test and training DataFrames.
+
+Data Cleaning:
+Duplicate rows are removed, empty rows are dropped, and the data types of all columns are checked and converted to match the expected schema. Any mismatches are reported to ensure consistency between the test and training datasets.
+  </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/histo-todos.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 40%; height: auto;">
+      <img src="assets/img/importancia-variables-keras.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 40%; height: auto;">
+           <img src="assets/img/features-regresion.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 40%; height: auto;">
+    </div>
+
+    
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/selec-var12.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 50%; height: auto;">
+
+           <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/selec-var2.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 100%; height: auto;">
+      
+    </div>
+    
+    <p class="about__text" style="margin-bottom: 1rem;">
+    </p>
+    <section class="algorithms section" id="algorithms">
+  
+   
+      </div>
+
+   <!--===== Machine learning =====-->
+<section class="about section" id="overview">
+  <h2 class="section-title">RUL prediction using Machine Learning</h2>
+
+  <div>
+    <p class="about__text">
+The machine learning section focuses on building and evaluating predictive models capable of estimating the Remaining Useful Life (RUL) of the engines using the complete dataset. The process begins by preparing the input features and target values derived from the sensor measurements and operational settings. A Linear Regression model was initially implemented to establish a baseline. Although this model provided a simple reference point, its performance was limited because the relationships among the variables are highly nonlinear and influenced by complex degradation patterns.
+
+To address these limitations, a Random Forest Regressor was developed and trained using the cleaned and combined dataset. This model allowed the capture of nonlinear interactions among sensors, operational conditions, and fault models. Several hyperparameters were tuned, including the number of estimators, tree depth, and the sampling strategy, in order to improve accuracy and reduce overfitting. During the modeling process, sensor importance was analyzed to identify which variables contributed most to predicting the RUL. This analysis helped refine the input features by emphasizing the most informative measurements.
+
+After training, the model was validated using the true RUL values provided in the NASA dataset. The comparison between predicted and actual RUL allowed a detailed evaluation of model performance and helped confirm that the optimized Random Forest model significantly outperformed the linear baseline. These results highlight the relevance of nonlinear methods for capturing the complex behavior of engine degradation and demonstrate the potential of ensemble-based approaches for reliable RUL estimation.
+  </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/prediccion-validacion-randomForest.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 40%; height: auto;">
+      <img src="assets/img/loss-keras.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 40%; height: auto;">
+           
+    </div>
+
+  
+    
+    <p class="about__text" style="margin-bottom: 1rem;">
+    </p>
+    <section class="algorithms section" id="algorithms">
+  
+   
+      </div>
+
+  
+
+   
+    <!--===== BACK BUTTON =====-->
+    <section class="contact section" id="back">
+      <div class="contact__container bd-grid">
+        <a href="index.html#work" class="button">← Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <!--===== FOOTER =====-->
+  <footer class="footer">
+    <p class="footer__title">Miguel</p>
+    <div class="footer__social">
+      <a href="https://www.linkedin.com/in/miguel-verdi-90b788175/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://github.com/MiguelVerdi" class="footer__icon"><i class='bx bxl-github'></i></a>
+    </div>
+    <p class="footer__copy">© Miguel Verdi. All rights reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

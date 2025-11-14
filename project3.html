@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 – Autonomous Systems Research</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="index.html" class="nav__logo">Miguel</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!--===== PROJECT HERO =====-->
+    <section class="home bd-grid" id="project">
+      <div class="home__data">
+        <h1 class="home__title">Navigation Observer Design Using Vector Measurements and a GPS Sensor
+<br><span class="home__title-color">Research Project</span></h1>
+        <p>This project was carried out during a two-year internship in which I worked weekly at the Mechatronics Laboratory at the National Autonomous University of Mexico (UNAM) as part of my academic credits at the Autonomous University of Querétaro (UAQ).
+
+I worked under the supervision of Dr. Yu Tang, collaborating closely with Larry Serratos to assist a Ph.D. student, Giovanna Ahuatzin-Flores, in hardware testing, flight experiments, and data analysis. This collaborative work contributed to the publication of a paper in the IEEE Sensors Journal:
+DOI: 10.1109/JSEN.2023.3309234</p>
+      </div>
+  <!-- Image section -->
+  <div style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    margin-top: 2rem;
+  ">
+    <img src="assets/img/uat.png" alt="Simulation setup" 
+         style="width: 40%; min-width: 280px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+    <img src="assets/img/uaq.png" alt="Routing visualization" 
+         style="width: 10%; min-width: 280px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+  </div>
+    </section>
+
+<!--===== OVERVIEW =====-->
+<section class="about section" id="overview">
+  <h2 class="section-title">Overview</h2>
+
+  <div>
+    <p class="about__text">
+This project focuses on the design and implementation of a nonlinear navigation observer for a quadrotor UAV using low-cost sensors and open-source software. Unmanned Aerial Vehicles (UAVs) are autonomous systems widely applied in environmental monitoring, precision agriculture, and defense. However, achieving stable and accurate control with inexpensive hardware introduces significant challenges due to measurement noise, biases, and uncertainty.
+
+The proposed system integrates a cascaded observer architecture consisting of a rotational state observer (for angular velocity and attitude) and a translational state observer (for position and linear velocity). Based on Lyapunov stability analysis, the rotational observer demonstrates almost global asymptotic stability, while the translational observer achieves global exponential stability under mild assumptions on attitude estimation errors.    </p>
+ 
+    
+  </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/tang1.jpeg" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 20%; height: auto;">
+      <img src="assets/img/tang7.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 30%; height: auto;">
+    </div>
+    
+    <p class="about__text" style="margin-bottom: 1rem;">
+    </p>
+    <section class="algorithms section" id="algorithms">
+  
+
+<section class="results section" id="results">
+  <h2 class="section-title">Project Development and Results</h2>
+  <div class="about__container bd-grid" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+    <!-- Texto -->
+    <div style="width: 100%; max-width: 900px; margin: 0 auto;">
+      <p class="about__text">
+The mechanical and electronic assembly included the installation of brushless motors, electronic speed controllers (ESCs), a PX4 flight controller, GPS module, power distribution board, and an IMU sensor. The correct wiring and configuration of these components were verified to ensure proper communication and operation.
+
+Once the system was assembled, initial calibration tests were performed using the Mission Planner platform, adjusting the magnetometer, accelerometer, and remote control parameters.
+
+In parallel, the Ardupilot development environment was configured, and the necessary firmware modules were compiled to enable communication between the flight controller and the onboard microcontroller. This integration allowed establishing a stable telemetry link between the drone and the ground station      </p>
+    
+      <p class="about__text">
+To estimate the drone’s orientation, the TRIAD method was implemented in MATLAB using measurements from the magnetometer and accelerometer to determine the Euler angles. This approach enabled comparison between the estimated orientation and the actual readings obtained from the drone.      </p>
+    </div>
+    
+<!--===== GALLERY SECTION =====-->
+<!--===== GALLERY =====-->
+
+<section class="about section" id="overview">
+  <h2 class="section-title">Gallery</h2>
+
+  
+  </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/tang3.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 45%; height: auto;">
+      <img src="assets/img/tang2.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 45%; height: auto;">
+      <img src="assets/img/tang4.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 45%; height: auto;">     
+           
+    </div>
+
+
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+    <img src="assets/img/tang6.png" alt="Autonomous Vehicle Simulation"
+         class="overview__img" style="max-width:100%; height: auto;">
+     
+         
+  </div>
+<!--===== VIDEO SECTION =====-->
+<section class="video section" id="video">
+  <h2 class="section-title">Project Video</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OhR0Aoc0GQs?si=KK48HKCmSD5cyjQj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+
+
+
+
+
+
+
+
+   
+    <!--===== BACK BUTTON =====-->
+    <section class="contact section" id="back">
+      <div class="contact__container bd-grid">
+        <a href="index.html#work" class="button">← Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <!--===== FOOTER =====-->
+  <footer class="footer">
+    <p class="footer__title">Miguel</p>
+    <div class="footer__social">
+      <a href="https://www.linkedin.com/in/miguel-verdi-90b788175/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://github.com/MiguelVerdi" class="footer__icon"><i class='bx bxl-github'></i></a>
+    </div>
+    <p class="footer__copy">© Miguel Verdi. All rights reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

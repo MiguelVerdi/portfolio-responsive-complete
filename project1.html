@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 – Autonomous Systems Research</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="index.html" class="nav__logo">Miguel</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!--===== PROJECT HERO =====-->
+    <section class="home bd-grid" id="project">
+      <div class="home__data">
+        <h1 class="home__title">QoS-guaranteed Clustering and Routing Protocol
+          for Extended Sensor Sharing in Vehicular Networks<br><span class="home__title-color">Research Project</span></h1>
+        <p>Developed during my Mitacs Globalink Research Internship at the Computer Networks Lab, University of Victoria, under the supervision of Dr. Lin Cai and Xiangyu Ren.</p>
+      </div>
+  <!-- Image section -->
+  <div style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    margin-top: 2rem;
+  ">
+    <img src="assets/img/uvic.png" alt="Simulation setup" 
+         style="width: 40%; min-width: 280px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+    <img src="assets/img/mitacs.png" alt="Routing visualization" 
+         style="width: 40%; min-width: 280px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+  </div>
+    </section>
+
+<!--===== OVERVIEW =====-->
+<section class="about section" id="overview">
+  <h2 class="section-title">Overview</h2>
+
+  <p class="about__text" style="margin-bottom: 1rem;">
+    This project focuses on enhancing extended sensor sharing (ESS) in vehicular networks, a key technology for future connected and autonomous vehicles. ESS requires reliable and high-speed communication between moving vehicles, which is challenging due to rapid topology changes and strict Quality of Service (QoS) demands.
+  </p>
+  
+  <p class="about__text" style="margin-bottom: 1rem;">
+    To address this, we developed a QoS-guaranteed Clustering and Routing Protocol (QCRP) based on a modular network architecture that separates the control and data planes. The protocol employs a Protocol Control Agent (PCA) to adapt network control functions according to service requirements and real-time conditions.
+  </p>
+  
+  <p class="about__text">
+    QCRP ensures stable communication by using predictive clustering and adaptive routing, allowing vehicles to maintain connectivity and meet QoS constraints even under high mobility. Simulation results in highway scenarios demonstrate that QCRP achieves consistent end-to-end QoS and outperforms existing routing protocols in performance and reliability.
+  
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="assets/img/work1-qos.png" alt="Autonomous Vehicle Simulation"
+           class="overview__img" style="max-width: 45%; height: auto;">
+      <img src="assets/img/work1-qos2.png" alt="Network Architecture Diagram"
+           class="overview__img" style="max-width: 45%; height: auto;">
+    </div>
+    
+    <p class="about__text" style="margin-bottom: 1rem;">
+algo 
+    </p>
+    <section class="algorithms section" id="algorithms">
+      <h2 class="section-title">QCRP Algorithms</h2>
+      <div class="about__container bd-grid">
+    <!-- Algorithm 1 -->
+  <div class="about__container bd-grid" style="align-items: center; margin-bottom: 3rem;">
+    <div>
+      <h3 class="section-subtitle">1. Predictive Clustering Algorithm</h3>
+      <p class="about__text">
+        The predictive clustering algorithm maintains stable connections among high-speed vehicles by forecasting mobility patterns and adjusting communication intervals dynamically. 
+        Each cluster head monitors link stability and predicts when connections might break, adapting update frequency to balance network reliability and overhead.
+      </p>
+
+      <p class="about__text">
+        This mechanism ensures that the network remains connected even when vehicles move rapidly, reducing unnecessary updates and improving resource efficiency.
+      </p>
+    </div>
+    <div style="text-align: center;">
+      <img src="assets/img/algorithm1.jpg" alt="Predictive Clustering Diagram" style="max-width: 90%; height: auto; border-radius: 12px;">
+    </div>
+  </div>
+
+  <!-- Algorithm 2 -->
+  <div class="about__container bd-grid" style="align-items: center; margin-bottom: 3rem;">
+    <div>
+      <h3 class="section-subtitle">2. QoS-Aware Routing Algorithm</h3>
+      <p class="about__text">
+        The QoS-Aware Routing Algorithm determines the most efficient communication paths between vehicles, prioritizing low latency and high reliability. 
+        It evaluates multiple route candidates and selects those that meet quality-of-service requirements under varying traffic densities.
+      </p>
+
+      <p class="about__text">
+        The algorithm adapts in real-time to network changes, rerouting data when vehicles move or links degrade, ensuring consistent communication for sensor sharing.
+      </p>
+    </div>
+    <div style="text-align: center;">
+      <img src="assets/img/algorithm2.jpg" alt="QoS Routing Flowchart" style="max-width: 90%; height: auto; border-radius: 12px;">
+    </div>
+  </div>
+
+  <!-- Algorithm 3 -->
+  <div class="about__container bd-grid" style="align-items: center; margin-bottom: 3rem;">
+    <div>
+      <h3 class="section-subtitle">3. Protocol Control Agent (PCA)</h3>
+      <p class="about__text">
+        The Protocol Control Agent (PCA) oversees the entire network’s operation by adjusting clustering and routing parameters according to real-time conditions. 
+        It processes feedback on latency, packet loss, and network congestion to ensure that communication remains stable and meets predefined QoS goals.
+      </p>
+
+      <p class="about__text">
+        This adaptive control layer enables QCRP to maintain optimal performance across different vehicular scenarios, from sparse traffic to dense highway environments.
+      </p>
+    </div>
+    <div style="text-align: center;">
+      <img src="assets/img/algorithm3.jpg" alt="PCA Control Architecture" style="max-width: 200%; height: auto; border-radius: 12px;">
+    </div>
+  </div>
+</section>
+    
+   <!--===== PERFORMANCE EVALUATION =====-->
+<section class="results section" id="results">
+  <h2 class="section-title">Performance Evaluation</h2>
+  <div class="about__container bd-grid" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+    <!-- Texto -->
+    <div style="flex: 1; min-width: 300px;">
+      <p class="about__text">
+        The proposed <strong>QoS-guaranteed Clustering and Routing Protocol (QCRP)</strong> was validated through extensive simulations using the 
+        <em>Simulation of Urban Mobility (SUMO)</em> and <em>ns-3</em> platforms. The experiments analyzed QCRP under various traffic densities 
+        (high, medium, low, and sparse) on a 5 km four-lane highway, using realistic vehicle mobility and wireless channel parameters.
+      </p>
+
+      <p class="about__text">
+        QCRP’s performance was compared against benchmark protocols such as AODV, DGGR, K-Means, and Road Segmentation.
+        The results demonstrate that QCRP maintains higher cluster connectivity, ensures lower end-to-end delay, and achieves
+        superior packet delivery ratios even under high mobility conditions.
+      </p>
+    </div>
+
+    <!-- Imagen -->
+    
+  </div>
+
+
+
+  <!--===== Result Group 3 =====-->
+  <div class="about__container bd-grid" style="align-items: center; margin-top: 3rem;">
+    <div>
+      <h3 class="section-subtitle">Overall QCRP Evaluation</h3>
+      <p class="about__text">
+        When fully implemented, QCRP achieved the highest throughput and packet delivery rate under all traffic conditions. 
+        It demonstrated robustness against network mobility and outperformed other protocols in both dense and sparse scenarios,
+        maintaining consistent communication quality.
+      </p>
+    </div>
+  </div>
+
+  <div class="results__images" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 1rem;">
+    <img src="assets/img/results.png" alt="Throughput performance" style="max-width: 80%; height: auto; border-radius: 12px;">
+  </div>
+
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <embed src="assets\img\QCRP_journal_extension.pdf" type="application/pdf" width="80%" height="600px" />
+  </div>
+  
+</section>
+
+   
+    <!--===== BACK BUTTON =====-->
+    <section class="contact section" id="back">
+      <div class="contact__container bd-grid">
+        <a href="index.html#work" class="button">← Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <!--===== FOOTER =====-->
+  <footer class="footer">
+    <p class="footer__title">Miguel</p>
+    <div class="footer__social">
+      <a href="https://www.linkedin.com/in/miguel-verdi-90b788175/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://github.com/MiguelVerdi" class="footer__icon"><i class='bx bxl-github'></i></a>
+    </div>
+    <p class="footer__copy">© Miguel Verdi. All rights reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
